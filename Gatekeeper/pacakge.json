@@ -1,0 +1,20 @@
+{
+  "name": "gatekeeper-app",
+  "version": "1.0.0",
+  "description": "A simple user authentication app for Code Academy.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "auth",
+    "nodejs",
+    "express"
+  ],
+  "author": "Code Academy Student",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "express": "^4.18.2"
+  }
+}
