@@ -1,0 +1,14 @@
+<%- include('layout') %>
+<h2><%= side.charAt(0).toUpperCase() + side.slice(1) %> Downline</h2>
+<% if (!immediate) { %>
+  <p>No immediate <%= side %> member.</p>
+<% } else { %>
+  <p>Immediate child: <strong><%= immediate.name %></strong> (<%= immediate.member_code %>)</p>
+  <p>Left count: <%= immediate.left_count %> Right count: <%= immediate.right_count %></p>
+  <h3>Subtree (first 3 levels)</h3>
+  <ul>
+    <% subtree.forEach(function(n) { %>
+      <li>Depth <%= n.depth %> - <%= n.name %> (<%= n.member_code %>) - left_count: <%= n.left_count %>, right_count: <%= n.right_count %></li>
+    <% }) %>
+  </ul>
+<% } %>

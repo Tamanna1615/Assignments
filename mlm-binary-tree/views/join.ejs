@@ -1,0 +1,20 @@
+<%- include('layout') %>
+<h2>Member Joining Form</h2>
+<% if (error) { %><p style="color:red"><%= error %></p><% } %>
+<% if (success) { %><p style="color:green"><%= success %></p><% } %>
+<form method="post" action="/members/join">
+  <div><label>Name: <input name="name" value="<%= values.name || '' %>" required /></label></div>
+  <div><label>Email: <input name="email" value="<%= values.email || '' %>" required /></label></div>
+  <div><label>Mobile: <input name="mobile" value="<%= values.mobile || '' %>" /></label></div>
+  <div><label>Sponsor Code: <input name="sponsor_code" value="<%= values.sponsor_code || '' %>" required /></label></div>
+  <div>
+    <label>Position:
+      <select name="position">
+        <option value="Left" <%=(values.position==='Left')?'selected':''%>>Left</option>
+        <option value="Right" <%=(values.position==='Right')?'selected':''%>>Right</option>
+      </select>
+    </label>
+  </div>
+  <div><label>Password: <input type="password" name="password" required /></label></div>
+  <div><button type="submit">Join</button></div>
+</form>

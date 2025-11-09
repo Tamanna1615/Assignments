@@ -1,0 +1,8 @@
+<%- include('layout') %>
+<h2>Welcome, <%= me.name %> (<%= me.member_code %>)</h2>
+<p>Left count: <%= me.left_count %> &nbsp; Right count: <%= me.right_count %></p>
+<p>
+  <a href="/members/downline/left">View Left Downline</a> |
+  <a href="/members/downline/right">View Right Downline</a> |
+  <a href="/members/join">Add Member</a>
+</p>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>MLM Binary</title>
+  <link rel="stylesheet" href="/public/style.css"/>
+</head>
+<body>
+  <nav>
+    <% if (currentUser) { %>
+      <a href="/members/dashboard">Dashboard</a> |
+      <a href="/members/join">Join Member</a> |
+      <a href="/members/profile">Profile</a> |
+      <a href="/logout">Logout</a>
+    <% } else { %>
+      <a href="/login">Login</a>
+    <% } %>
+  </nav>
+  <main>
+    <%- body %>
+  </main>
+</body>
+</html>
